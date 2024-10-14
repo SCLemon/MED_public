@@ -90,8 +90,12 @@ const wordRouter = require('./routes/wordRouter');
 app.use(wordRouter);
 
 app.listen(3007, () => {
-    console.log('服务已经启动, 端口 3007 正在监听中....')
+    console.log('PORT 3007 is listening')
 })
+
+// AI socket
+const { startAIWebSocketServer } = require('./routes/ws/aiSocket.js');
+startAIWebSocketServer(3000)
 
 // 避免系統中斷
 process.on('uncaughtException', (err) => {
