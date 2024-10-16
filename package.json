@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "http_start": "sudo node index.js & cd server && sudo npm run http_server",
-    "https_start": "sudo node index2.js & cd server && sudo npm run https_server",
+    "http_start": "sudo node http.js & cd server && sudo npm run http_server",
+    "https_start": "sudo node https.js & cd server && sudo npm run https_server",
     "openDB": "sudo systemctl start mongod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
