@@ -16,59 +16,59 @@ const options = {
 
 // 配置代理
 app.use('/chat/', createProxyMiddleware({
-  target: 'https://127.0.0.1:3007/chat/',
+  target: 'http://127.0.0.1:3007/chat/',
   changeOrigin: true
 }));
 
 app.use('/verify/', createProxyMiddleware({
-  target: 'https://localhost:3007/verify/',
+  target: 'http://localhost:3007/verify/',
   changeOrigin: true,
   logger: console
 }));
 
 app.use('/userInfo/', createProxyMiddleware({
-  target: 'https://localhost:3007/userInfo/',
+  target: 'http://localhost:3007/userInfo/',
   changeOrigin: true
 }));
 
 app.use('/reminder/', createProxyMiddleware({
-  target: 'https://127.0.0.1:3007/reminder/',
+  target: 'http://127.0.0.1:3007/reminder/',
   changeOrigin: true
 }));
 
 app.use('/filter/', createProxyMiddleware({
-  target: 'https://127.0.0.1:3007/filter/',
+  target: 'http://127.0.0.1:3007/filter/',
   changeOrigin: true
 }));
 
 app.use('/aiSetting/', createProxyMiddleware({
-  target: 'https://127.0.0.1:3007/aiSetting/',
+  target: 'http://127.0.0.1:3007/aiSetting/',
   changeOrigin: true
 }));
 
 app.use('/schedule/', createProxyMiddleware({
-  target: 'https://127.0.0.1:3007/schedule/',
+  target: 'http://127.0.0.1:3007/schedule/',
   changeOrigin: true
 }));
 
 app.use('/imageHistory/', createProxyMiddleware({
-  target: 'https://127.0.0.1:3007/imageHistory/',
+  target: 'http://127.0.0.1:3007/imageHistory/',
   changeOrigin: true
 }));
 
 app.use('/stock/', createProxyMiddleware({
-  target: 'https://127.0.0.1:3007/stock/',
+  target: 'http://127.0.0.1:3007/stock/',
   changeOrigin: true
 }));
 
 app.use('/word/', createProxyMiddleware({
-  target: 'https://127.0.0.1:3007/word/',
+  target: 'http://127.0.0.1:3007/word/',
   changeOrigin: true
 }));
 
 app.use('/api/', createProxyMiddleware({
-  target: 'https://127.0.0.1:3007/api/',
-  changeOrigin: true
+  target: 'http://127.0.0.1:3007/api/',
+  changeOrigin:true
 }));
 
 app.use(express.static(path.join(__dirname, 'dist')));
