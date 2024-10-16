@@ -21,7 +21,7 @@ https://www.mongodb.com/download-center/community/releases
 ```
 
 ## Generate SSL Certificate (Only HTTPS Required)
-Put the key.pem & cert.pem at the previous level directory of this project.
+Put the ``key.pem`` & ``cert.pem`` at the previous level directory of this project.
 ```
 The Directory's Relative Path is shown as  '../MED_public'
 ```
@@ -83,8 +83,22 @@ Install Package for Server Side
 ```
 npm i
 ```
-Finally, go back to the Previous level directory
+Setup the apiKey
+```
+nano apiKey.js
+```
 
+And Put the following code into the apiKey.js
+```
+const FugleAPIKey = '' // https://developer.fugle.tw/
+const NewsAPIKey = '' // https://newsapi.org/s/taiwan-news-api
+const openaiKey=''  // https://platform.openai.com/
+module.exports = {
+    openaiKey,FugleAPIKey,NewsAPIKey
+}
+```
+
+Finally, go back to the Previous level directory
 ```
 cd ../
 (now you will be at directory as 'MED_public')
