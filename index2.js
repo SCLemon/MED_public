@@ -10,8 +10,8 @@ const PORT = process.env.PORT || 4040;
 // 加载 SSL 憑證
 const {keyForHttps , pemForHttps} = require('./sslPath.js')
 const options = {
-  key: fs.readFileSync(path.resolve(__dirname, 'path/to/ssl/key.pem')),
-  cert: fs.readFileSync(path.resolve(__dirname, 'path/to/ssl/cert.pem'))
+  key: fs.readFileSync(path.resolve(__dirname, keyForHttps)),
+  cert: fs.readFileSync(path.resolve(__dirname, pemForHttps))
 };
 
 // 配置代理

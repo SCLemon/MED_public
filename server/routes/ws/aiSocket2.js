@@ -11,8 +11,8 @@ const path = require('path');
 // 加载 SSL 憑證
 const {keyForWss , pemForWss} = require('../../../sslPath.js')
 const options = {
-  key: fs.readFileSync(path.resolve(__dirname, 'path/to/ssl/key.pem')),
-  cert: fs.readFileSync(path.resolve(__dirname, 'path/to/ssl/cert.pem'))
+  key: fs.readFileSync(path.resolve(__dirname, keyForWss)),
+  cert: fs.readFileSync(path.resolve(__dirname, pemForWss))
 };
 
 // 創建 HTTPS 伺服器
