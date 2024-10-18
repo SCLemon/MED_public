@@ -118,6 +118,23 @@ sudo npm run http_start (for http environment)
 sudo npm run https_start (for https environment)
 ```
 
+# Generate SSL Certification
+```
+// 獲取免費 Domain Name
+https://my.noip.com/
+
+// 安裝 Let's Encrypt
+sudo apt update
+sudo apt install certbot
+
+// 手動獲取憑證
+sudo certbot certonly --standalone
+
+// 自動更新憑證
+sudo certbot renew --dry-run
+
+```
+
 ## Authors
 
 - [@SCLemon](https://github.com/SCLemon)  (2024/04/01 ~ Current)
